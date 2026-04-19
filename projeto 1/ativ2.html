@@ -1,69 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="utf-8">
-  <title> formulario</title>
+  <meta charset="UTF-8">
+  <title>Programa Battle Royale</title>
   <style>
-    #check-termos {
-      display: none;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url("https://theoldcinema.b-cdn.net/media/catalog/product/cache/9e466686975e05e3305ab6e5d5888b6a/b/a/battle_royale_11_42119b.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
     }
 
-    #check-termos:checked+div {
-      color: rgb(245, 0, 163);
+    .container {
+      width: 350px;
+      margin: 80px auto;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid red;
+      box-shadow: 0 0 15px red;
+    }
+
+    h1 {
+      text-align: center;
+      color: red;
+      font-size: 20px;
+    }
+
+    p.topo {
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #222;
+      color: white;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .radio-group {
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background: red;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: darkred;
+      box-shadow: 0 0 10px red;
     }
   </style>
 </head>
-
 <body>
-  <input type="checkbox" id="check-termos" name="termos">
-  <div>
-    oieeee galera
+
+  <div class="container">
+    <h1>Programa Battle Royale</h1>
+    <p class="topo">Turma selecionada. Apenas um sobreviverá.</p>
+
+    <form>
+      <label>Nome:</label>
+      <input type="text" required>
+
+     <label>Número do aluno:</label>
+<select required>
+  <option value="">Selecione...</option>
+  
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+  
+  <option>21</option>
+  <option>22</option>
+  <option>23</option>
+  <option>24</option>
+  <option>25</option>
+  <option>26</option>
+  <option>27</option>
+  <option>28</option>
+  <option>29</option>
+  <option>30</option>
+  
+  <option>31</option>
+  <option>32</option>
+  <option>33</option>
+  <option>34</option>
+  <option>35</option>
+  <option>36</option>
+  <option>37</option>
+  <option>38</option>
+  <option>39</option>
+  <option>40</option>
+  
+  <option>41</option>
+  <option>42</option>
+</select>
+
+      <label>Turma:</label>
+      <input type="text" required>
+
+      <label>Você confiaria em alguém?</label>
+      <div class="radio-group">
+        <input type="radio" name="confia"> Sim
+        <input type="radio" name="confia"> Não
+      </div>
+
+      <label>O que você faria primeiro?</label>
+      <select>
+        <option>Procurar aliados</option>
+        <option>Se esconder</option>
+        <option>Atacar</option>
+      </select>
+
+      <label>Estilo de sobrevivência:</label>
+      <div class="radio-group">
+        <input type="radio" name="estilo"> Combate direto
+        <input type="radio" name="estilo"> Estratégia
+        <input type="radio" name="estilo"> Fuga
+      </div>
+
+      <label>Chance de sobrevivência:</label>
+      <input type="range" min="0" max="100">
+
+      <label>Até onde você iria para sobreviver?</label>
+      <textarea rows="3"></textarea>
+
+      <button type="submit">Entrar no Programa</button>
+    </form>
   </div>
 
-
-  <form action="" method="get">
-
-    <div>
-      <label for="inp-nome">Nome</label>
-      <input type="text" name="nome" id="inp-nome">
-    </div>
-
-    <div>
-      <label for="sel-posicao">Posição</label>
-      <select id="sel-posicao">
-        <option>cima</option>
-        <option>baixo</option>
-        <option>esquerda</option>
-        <option>direita</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="">Posição</label>
-      <input type="radio" name="posicao">Cima
-      <input type="radio" name="posicao">Baixo
-      <input type="radio" name="posicao">Esquerda
-      <input type="radio" name="posicao">Direita
-    </div>
-
-    <div>
-      <label for="txt-mensagem">Mensagem</label>
-      <textarea id="txt-mensagem" name="mensagem" cols="30" rows="10">oi...</textarea>
-    </div>
-
-    <div>
-      <label for="check-termos">Termos de Uso</label>
-    </div>
-
-    <button>
-      enviar
-      
-    </button>
-
-  </form>
-
-
 </body>
-
 </html>
